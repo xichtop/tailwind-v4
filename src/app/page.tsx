@@ -54,7 +54,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="w-full bg-default h-10"></div>
+      <div className="w-full h-10 no-scroll-bar bg-card"></div>
     </div>
   );
 }
