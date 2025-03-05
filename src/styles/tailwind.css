@@ -2,6 +2,75 @@
 @plugin "daisyui";
 @plugin "@tailwindcss/typography";
 
+@plugin "daisyui/theme" {
+  name: "lightTheme";
+  default: true;
+  color-scheme: "light";
+
+  --color-base-100: oklch(98% 0.003 247.858);
+  --color-base-200: oklch(98% 0.002 247.839);
+  --color-base-300: oklch(98% 0 0);
+  --color-base-content: oklch(12% 0.042 264.695);
+  --color-primary: #45bdbf;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #ff9900;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #FFBC42;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: oklch(37% 0.044 257.287);
+  --color-neutral-content: #FFFFFF;
+  --color-info: oklch(54% 0.245 262.881);
+  --color-info-content: #FFFFFF;
+  --color-success: oklch(59% 0.145 163.225);
+  --color-success-content: #FFFFFF;
+  --color-warning: oklch(64% 0.222 41.116);
+  --color-warning-content: oklch(98% 0.016 73.684);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 0.5rem;
+  --radius-field: 0rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
+@plugin "daisyui/theme" {
+  name: "darkTheme";
+  color-scheme: "dark";
+
+  --color-base-100: #111827;
+  --color-base-200: #253555;
+  --color-base-300: #273e65;
+  --color-base-content: #FFFFFF;
+  --color-primary: #45bdbf;
+  --color-primary-content: #FFFFFF;
+  --color-secondary: #ff9900;
+  --color-secondary-content: #FFFFFF;
+  --color-accent: #FFBC42;
+  --color-accent-content: #FFFFFF;
+  --color-neutral: oklch(37% 0.044 257.287);
+  --color-neutral-content: #FFFFFF;
+  --color-info: oklch(54% 0.245 262.881);
+  --color-info-content: #FFFFFF;
+  --color-success: oklch(59% 0.145 163.225);
+  --color-success-content: #FFFFFF;
+  --color-warning: oklch(64% 0.222 41.116);
+  --color-warning-content: oklch(98% 0.016 73.684);
+  --color-error: oklch(57% 0.245 27.325);
+  --color-error-content: oklch(97% 0.013 17.38);
+  --radius-selector: 0.5rem;
+  --radius-field: 0rem;
+  --radius-box: 0.5rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
+
 @custom-variant dark (&:where([data-theme=darkTheme], [data-theme=darkTheme] *));
 
 @theme {
