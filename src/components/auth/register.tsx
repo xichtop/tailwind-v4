@@ -1,4 +1,4 @@
-import ZodForm from "../shared/ZodForm";
+import ZodForm from '../shared/ZodForm';
 
 function Register() {
   return (

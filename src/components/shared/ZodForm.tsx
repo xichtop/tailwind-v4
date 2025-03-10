@@ -1,5 +1,5 @@
-import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 // Định nghĩa schema với Zod
@@ -28,28 +28,56 @@ function ZodForm() {
       <div>
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Your Name</legend>
-          <input type="text" className="input" placeholder="Your awesome name" {...register('name')} />
+          <input
+            type="text"
+            className="input"
+            placeholder="Your awesome name"
+            {...register('name')}
+          />
         </fieldset>
-        <div className="validator-hint">{errors.name && <p className="text-red-500">{errors.name.message}</p>}</div>
+        <div className="validator-hint">
+          {errors.name && <p className="text-red-500">{errors.name.message}</p>}
+        </div>
       </div>
 
       <div>
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Your Email</legend>
-          <input type="text" className="input" placeholder="Your awesome email" {...register('email')} />
+          <input
+            type="text"
+            className="input"
+            placeholder="Your awesome email"
+            {...register('email')}
+          />
         </fieldset>
-        <div className="validator-hint">{errors.email && <p className="text-red-500">{errors.email.message}</p>}</div>
+        <div className="validator-hint">
+          {errors.email && (
+            <p className="text-red-500">{errors.email.message}</p>
+          )}
+        </div>
       </div>
 
       <div>
         <fieldset className="fieldset">
           <legend className="fieldset-legend">Your Age</legend>
-          <input type="number" className="input" placeholder="Your awesome age"  {...register('age', { valueAsNumber: true })} />
+          <input
+            type="number"
+            className="input"
+            placeholder="Your awesome age"
+            {...register('age', { valueAsNumber: true })}
+          />
         </fieldset>
-        <div className="validator-hint">{errors.age && <p className="text-red-500">{errors.age.message}</p>}</div>
+        <div className="validator-hint">
+          {errors.age && <p className="text-red-500">{errors.age.message}</p>}
+        </div>
       </div>
 
-      <button className='btn' type="submit">Submit</button>
+      <button
+        className="btn"
+        type="submit"
+      >
+        Submit
+      </button>
     </form>
   );
 }
