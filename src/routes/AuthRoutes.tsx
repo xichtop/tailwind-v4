@@ -1,6 +1,6 @@
-import { Routes, Route } from 'react-router-dom';
-import Login from '../components/auth/login';
-import Register from '../components/auth/register';
+import { Route, Routes } from "react-router-dom";
+import Login from "../components/auth/login";
+import Register from "../components/auth/register";
 
 export function AuthRoutes() {
   return (
@@ -8,5 +8,5 @@ export function AuthRoutes() {
       <Route path="login" element={<Login />} />
       <Route path="register" element={<Register />} />
     </Routes>
-  );
+  )
 }

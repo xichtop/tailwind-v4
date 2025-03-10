@@ -1,6 +1,7 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import { AuthRoutes } from "./routes/authRoutes"
-import Home from "./components/home/home"
+
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { AuthRoutes } from './routes/AuthRoutes'
+import Home from './components/home/home'
 
 function App() {
   return (

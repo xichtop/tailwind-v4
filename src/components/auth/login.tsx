@@ -3,22 +3,23 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 
 // Định nghĩa schema với Zod
-const schema = z.object({
+const formSchema = z.object({
   name: z.string().min(1, 'Name is required'),
   email: z.string().email('Email is not valid').min(1, 'Email is required'),
   age: z.number().min(18, 'Age must be greater than 18'),
 });
+type FormTye = z.infer<typeof formSchema>;
 
-function ZodForm() {
+function Login() {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: zodResolver(schema),
+    resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FormTye) => {
     console.log(data);
   };
 
@@ -53,4 +54,4 @@ function ZodForm() {
   );
 }
 
-export default ZodForm;
+export default Login;

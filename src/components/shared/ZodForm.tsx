@@ -8,8 +8,9 @@ const schema = z.object({
   email: z.string().email('Email is not valid').min(1, 'Email is required'),
   age: z.number().min(18, 'Age must be greater than 18'),
 });
+type FormType = z.infer<typeof schema>;
 
-function Login() {
+function ZodForm() {
   const {
     register,
     handleSubmit,
@@ -18,7 +19,7 @@ function Login() {
     resolver: zodResolver(schema),
   });
 
-  const onSubmit = (data) => {
+  const onSubmit = (data: FormType) => {
     console.log(data);
   };
 
@@ -53,4 +54,4 @@ function Login() {
   );
 }
 
-export default Login;
+export default ZodForm;
